@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #edf1ed;
+}
+li{
+    align-items: center;
+    vertical-align: center;
+    text-align: center;
+    display: inline;
+    padding: 0.7em;
+    font-size: 24px;
+    width: 300px;
+    height: 60px; 
+    border-radius: 0.1em;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    background: rgb(15, 39, 170);
+    list-style: none;
+    border: solid 2px;
+    border-radius: 0.1em;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.oscuro{
+    background: #282c2f;
+}
+.calculadora{
+    position: relative;
+    width: 340px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb;
+}
+.oscuro .calculadora{
+    background: #33393e;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+.calculadora .botones{
+    position: relative;
+    display: grid;
+}
+.calculadora .botones #valor{
+    position: relative;
+    grid-column: span 4;
+    user-select: none;
+    overflow: none;
+    width: 100%;
+    text-align: end;
+    color: #5266d6;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 0 20px;
+    font-size: 2em;
+    font-weight: 500;
+}
+.oscuro .calculadora .botones #valor{
+    color: #eee;
+    box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.5), inset -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+.calculadora .botones span{
+    position: relative;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),  -5px -5px 20px #fff;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #666;
+    border: 2px solid #edf1f4;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 15px -15px 10px #fffb;
+    border-radius: 10px;
+}
+.oscuro .calculadora .botones span{
+    color: #eee;
+    border: 2px solid #333;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),  -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+.calculadora .botones span:active{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+    color: #f44336;
+}
+.oscuro .calculadora .botones span:active{
+   box-shadow:  inset 5px 5px 10px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+.calculadora .botones span#limpiar{
+    grid-column: span 2;
+    background: #f44336;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.calculadora .botones span#mas{
+    grid-row: span 2;
+    background: #31a935;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.calculadora .botones span#igual{
+    grid-row: span 2;
+    background: #2196f3;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.oscuro .calculadora .botones span#limpiar,
+.oscuro .calculadora .botones span#mas,
+.oscuro .calculadora .botones span:active{
+    border: 2px #333;
+}
+.calculadora .botones span#limpiar:active,
+.calculadora .botones span#mas:active,
+.calculadora .botones span#igual:active{
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff, inset -5px -5px 10px rgba(0, 0, 0, 0.1);
+}
+.oscuro .calculadora .botones span#limpiar:active,
+.oscuro .calculadora .botones span#mas:active,
+.oscuro .calculadora .botones span#igual:active{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.botonCambiar{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #555;
+    cursor: pointer;
+    border: 2px solid #edf1f4;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+}
+.oscuro .botonCambiar{
+    background: #edf1f4;
+    border: 2px solid #edf1f4;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
+}
